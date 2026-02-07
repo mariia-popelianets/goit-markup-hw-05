@@ -706,10 +706,17 @@ img {
   flex-shrink: 0;
 }
 
+.check-icon {
+  opacity: 0;
+}
+
 .input-checkbox:checked + .terms-label .custom-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
-  outline: none;
+  border: none;
+}
+.input-checkbox:checked + .terms-label .custom-checkbox .check-icon {
+  opacity: 1;
 }
 
 .privacy-link {
