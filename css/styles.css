@@ -38,7 +38,7 @@ img {
     0 2px 1px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
 }
-.header__container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +130,7 @@ img {
   align-items: center;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(./../images/people-office.png);
+    url(./../images/people.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -139,7 +139,7 @@ img {
   max-width: 1440px;
   margin: 0 auto;
 }
-.main__container {
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,7 +184,7 @@ img {
   padding-bottom: 120px;
 }
 
-.features__container {
+.features-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -264,7 +264,7 @@ img {
 .team-section {
   background-color: #f4f4fd;
 }
-.team__container {
+.team-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -327,7 +327,7 @@ img {
   display: flex;
   fill: #f4f4fd;
 }
-.portfolio__container {
+.portfolio-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,14 +396,14 @@ img {
   margin: 0 auto;
   padding: 100px 0;
 }
-.footer__container {
+.footer-container {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 16px;
   max-width: 256px;
 }
-.footer__container__social {
+.footer-container-social {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -411,7 +411,7 @@ img {
   max-width: 208px;
   margin-right: -40px;
 }
-.footer__container__subscribe {
+.footer-container-subscribe {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -496,7 +496,8 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .form-input:hover,
 .form-input:focus {
@@ -527,7 +528,7 @@ img {
 .submit-btn:focus {
   background: #31d0aa;
 }
-.form-icon--submit {
+.form-icon-submit {
   fill: #ffffff;
 }
 .backdrop {
@@ -541,28 +542,16 @@ img {
   justify-content: center;
   align-items: center;
   background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity 250ms ease-in;
 }
 
-.hide-modal {
-  opacity: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
-.modal-content {
-  position: relative;
-  width: 408px;
-  height: 80%;
-  max-height: 584px;
-  padding: 24px;
-  border-radius: 4px;
-  overflow-y: auto;
-  box-shadow:
-    0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  background: #fcfcfc;
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .close-modal {
   position: absolute;
@@ -575,16 +564,32 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-icon--close {
+.modal-content {
+  position: relative;
+  width: 408px;
+  max-height: calc(100vh - 48px);
+  padding: 72px 24px 24px 24px;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+}
+
+.form-icon-close {
   fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal:focus,
 .close-modal:hover {
   background-color: #404bbf;
 }
-.close-modal:focus .form-icon--close,
-.close-modal:hover .form-icon--close {
+.close-modal:focus .form-icon-close,
+.close-modal:hover .form-icon-close {
   fill: #fff;
 }
 
@@ -592,10 +597,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 360px;
   font-weight: 500;
   font-size: 16px;
-  padding-top: 24px;
   margin-bottom: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -603,7 +606,7 @@ img {
 }
 .field-wrapper {
   width: 360px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .field-wrapper-inner {
   position: relative;
@@ -615,7 +618,7 @@ img {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .terms-label {
   display: flex;
@@ -667,7 +670,9 @@ img {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   justify-content: center;
   align-items: center;
