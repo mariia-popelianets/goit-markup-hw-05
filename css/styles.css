@@ -391,7 +391,6 @@ img {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 120px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 100px 0;
@@ -402,6 +401,7 @@ img {
   text-align: left;
   gap: 16px;
   max-width: 256px;
+  margin-right: 120px;
 }
 .footer-container-social {
   display: flex;
@@ -409,7 +409,7 @@ img {
   text-align: left;
   gap: 16px;
   max-width: 208px;
-  margin-right: -40px;
+  margin-right: 80px;
 }
 .footer-container-subscribe {
   display: flex;
@@ -417,6 +417,7 @@ img {
   text-align: left;
   gap: 16px;
   width: 453px;
+  margin-left: auto;
 }
 
 .footer-link {
@@ -610,10 +611,10 @@ img {
   color: #2e2f42;
 }
 .field-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
-.field-wrapper + .field-wrapper {
-  margin-top: 8px;
+.field-wrapper:nth-child(4) {
+  margin-bottom: 16px;
 }
 
 .field-wrapper-inner {
