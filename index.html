@@ -558,8 +558,119 @@
               </li>
             </ul>
           </div>
+          <div class="footer__container__subscribe">
+            <p class="subscribe-title">Subscribe</p>
+            <form class="form-subscribe">
+              <div class="form-field">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+              <div class="form-button--submit">
+                <button type="submit" class="submit-btn">
+                  Subscribe
+                  <svg class="form-icon--submit" width="24" height="24">
+                    <use href="./images/icons.svg#icon-frame"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
+    <div class="backdrop hide-modal">
+      <div class="modal-content">
+        <button type="button" class="close-modal">
+          <svg class="form-icon--close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form>
+          <div class="field-wrapper">
+            <label class="label-field" for="user-name">Name</label>
+            <div class="field-wrapper-inner">
+              <input
+                class="text-field"
+                type="text"
+                id="user-name"
+                name="user-name"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <label class="label-field" for="user-phone">Phone</label>
+            <div class="field-wrapper-inner">
+              <input
+                class="text-field"
+                type="tel"
+                id="user-phone"
+                name="user-phone"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <label class="label-field" for="user-email">Email</label>
+            <div class="field-wrapper-inner">
+              <input
+                class="text-field"
+                type="email"
+                id="user-email"
+                name="user-email"
+                required
+              />
+              <svg class="form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="field-wrapper">
+            <label class="label-field" for="user-comment">Comment</label>
+            <textarea
+              class="comment-field"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="user-terms"
+              name="user-terms"
+              value="true"
+              required
+              class="input-checkbox visually-hidden"
+            />
+            <label for="user-terms" class="terms-label">
+              <span class="custom-checkbox">
+                <svg heigth="8" width="10" class="check-icon">
+                  <use href="./images/icons.svg#icon-click"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="" class="accent privacy-link">Privacy Policy</a></label
+            >
+          </div>
+          <button type="submit" class="form-submit-btn">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
