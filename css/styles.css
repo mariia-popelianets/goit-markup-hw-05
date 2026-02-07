@@ -609,7 +609,7 @@ img {
   color: #2e2f42;
 }
 .field-wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .field-wrapper-inner {
   position: relative;
@@ -618,7 +618,7 @@ img {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.33;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -628,7 +628,7 @@ img {
   align-items: center;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.33;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 24px;
@@ -714,7 +714,7 @@ img {
 }
 .privacy-link:focus,
 .privacy-link:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .form-submit-btn {
